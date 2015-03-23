@@ -1,0 +1,20 @@
+.dropdownmask {
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.2);
+	z-index: 2;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.popup.dropdownoptions {
+	position: absolute;
+	z-index: 3;
+	background: white;
+	border: black solid 1px;
+}
+
+.Toggle {
+	cursor: pointer;
+}

@@ -1,0 +1,80 @@
+@import "../../node_modules/node-bourbon/node_modules/bourbon/app/assets/stylesheets/bourbon";
+@import "../../node_modules/foundation/scss/foundation.scss";
+@import "../../node_modules/foundation/scss/normalize";
+
+@import "Colors";
+@import "Fonts";
+
+body {
+	margin: 64px 0 0 0;
+
+	background: $k05;
+
+	h1, h2, h3, h4, h5, p, a, span, input, button, .pila-button, div {
+		font-family: 'circularstd';
+	}
+
+	li {
+		list-style-type: none;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+//components 
+
+.pila-button {
+	background: $pila-main;
+	color: white;
+
+	&.reverse {
+		background: $pila-dark;
+		color: white;
+	}
+
+	&:hover {
+		&.reverse {
+			background: $pila-dark-hover;
+		}
+	}
+}
+
+.Button {
+	font-size: 16px;
+	display: inline-block;
+	padding: 0.5em;
+	margin: 0.5em;
+	line-height: 1.5em;
+	text-align: center;
+	-webkit-box-sizing: content-box;
+}
+
+.IconButton {
+	@extend .Button;
+	font-size: 20px;
+	padding: 0.3em;
+	margin: 0.3em;
+	line-height: 1.5em;
+	width: 1.5em;
+	cursor: pointer;
+}
+
+.IconButtonSet {
+	.IconButton {
+		padding-left: 0;
+		margin: 0;
+
+		&:first-child {
+			padding-left: 0.5em;
+		}
+	}
+
+}
+
+//end of components
+
+//pages
+
+@import "components";

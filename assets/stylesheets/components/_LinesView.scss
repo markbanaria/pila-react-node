@@ -1,0 +1,114 @@
+.LinesView {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	.LineCard {
+		-webkit-box-sizing: border-box;
+		margin: 40px;
+		width: 700px;
+
+		display: flex;
+		flex-direction: column;
+
+		background: white;
+		box-shadow: 0 2px 2px 2px rgba(0,0,0,0.2);
+
+		.LineCardSettings {
+			color: rgba(0,0,0,0.3);
+		}
+
+		.LineDetails {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			padding: 10px 10px;
+
+			.ActiveCustomerBox {
+				flex-grow: 1;
+				padding-left: 20px;
+			}
+
+			.LineTitle, .NowServing {	
+				font-size: 14px;
+				font-weight: 800;
+				padding-top: 0.6em;
+			}
+
+			.LineTitle {
+				padding-left: 20px;
+				color: $pila-main;
+				width: 120px;
+				overflow: hidden;
+			}
+
+			.NowServing {
+				color: $k40;
+			}
+
+			.ActiveCustomer {
+				color: $k50;
+				font-size: 28px;
+				margin-top: 10px;
+			}
+		}
+
+		.CustomersInLine {
+			.dropdownToggleContainer {
+				display: flex;
+
+				background: $k70;
+				cursor: pointer;
+				
+				font-size: 16px;
+				color: rgba(255,255,255,0.5);
+				font-weight: 700;
+				line-height: 54px;
+				vertical-align: middle;
+
+				.Toggle {
+					flex-grow: 1;
+				}
+
+				.ViewCustomers {
+					text-align: right;
+				}
+
+			}
+
+			.dropdownoptions {
+				margin: 0;
+				background: $k55;
+
+				li {
+					display: flex;
+					border-bottom: 1px solid rgba(255,255,255,0.12);
+
+					a {
+						color: $k20;
+						flex-grow: 1;
+						line-height: 54px;
+					}
+				}	
+			}
+
+			.AddCustomer, .RemoveCustomer {
+				width: 110px;
+				text-align: left;
+				padding-left: 20px;
+			}
+
+			.IconButton {
+				color: $k50;
+				min-height: 14px;
+				min-width: 14px;
+			}			
+		}
+	}
+}
+
+@media screen and (max-width: 780px) {
+	.LinesView .LineCard {
+		width: auto;
+	}
+}

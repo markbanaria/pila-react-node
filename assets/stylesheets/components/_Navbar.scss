@@ -1,0 +1,125 @@
+
+.NavHeader {
+	position: fixed;
+	top: 0;
+	z-index: 4;
+
+	background: $pila-main;
+	width: 100vw;
+	padding-right: 20px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.NavHeaderItems {		
+		font-size: 18px;
+		display: inline-block;
+		color: white;
+	}
+
+	.FillerContainer {
+		flex-grow: 1;
+	}
+
+	.PilaLogo {
+		text-align: right;
+		height: 1.35em;
+	}
+
+	.UserOptions {
+		@extend .IconButton;
+		margin: 0;
+		padding: 0;
+		width: auto;
+
+		text-align: left;
+		
+		.icon-button {			
+			padding: 18px;
+			display: block;
+			color: white;			
+			width: 210px;
+
+			&.selected {
+				background: $pila-dark;
+			}
+		}
+
+		.UserIcon {
+			padding-right: 0.5em;
+		}
+
+		.Collapse {
+			text-align: left;
+			min-width: 210px;
+			top: 63px;
+
+			background: $pila-dark;
+
+			a {
+				display: block;
+				padding: 12px 18px;				
+				color: white;
+			}
+
+			.triangle {
+				display: none;
+			}
+		}
+	}
+
+}
+
+.NavDrawer {
+
+	.DrawerList {
+		position: fixed;
+		top: 63px;
+
+		height: 100vh;
+		width: 220px;
+
+		background: white;
+		z-index: 3;
+		border: none;		
+		box-shadow: 0 2px 2px 2px rgba(0,0,0,0.2);
+
+		-webkit-transition: all 0.3s;
+
+		.DrawerLink, .Toggle {			
+			padding-left: 20px;
+
+			line-height: 64px;
+			color: black;
+			font-size: 14px;
+			font-weight: 800;
+			border-bottom: 1px solid rgba(0,0,0,0.12);
+
+			a {
+				color: black;
+			}
+		}
+
+		.dropdownoptions {
+			margin: 0;
+			padding-left: 20px;			
+			border-bottom: 1px solid rgba(0,0,0,0.12);
+			li {
+				line-height: 42px;
+				font-size: 14px;
+				a {
+					color: $k50;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 430px) {
+	.UserName {display: none;}
+}
+
+@media screen and (min-width: 430px) {
+	.UserName {display: inline;}
+}
